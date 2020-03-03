@@ -1,2 +1,2 @@
-all: parsing.c
-	cc -std=c99 -Wall parsing.c mpc.c -ledit -lm -o parsing
+all: parsing2.c
+	cc -std=c99 -Wall parsing2.c mpc.c -ledit -lm -o parsing
