@@ -49,7 +49,7 @@ long eval(mpc_ast_t* t) {
         return eval(t->children[1]);
     }
     else if (strstr(t->tag, "number")) {
-        return atol(t->contents);
+        return atof(t->contents);
     }
     else if(strstr(t->tag, "bool")) {
         if(!strcmp(t->contents, "True")) {
