@@ -4,7 +4,9 @@
 #include <editline/readline.h>
 #include <editline/history.h>
 
+
 // BIG NOTE: Compile w/ -ledit to run, and install libedit-dev
+// Another change: Gonna not include the _WIN32 directives cause WSL exists...
 
 int main(int argc, char ** argv) {
 
