@@ -4,6 +4,8 @@
 #include <editline/readline.h>
 #include <editline/history.h>
 
+// BIG NOTE: Compile w/ -ledit to run, and install libedit-dev
+
 int main(int argc, char ** argv) {
 
     printf("Lispy First Attempt\n");
@@ -11,6 +13,9 @@ int main(int argc, char ** argv) {
     while(1) {
         // readline: Seems like a more fun line reading tool, though I won't be 
         // able to use this for actual tooling haha.
+        // Firstly, it allocates to dynamic memory, so we need the free at the end
+        // Additionally, it also strips out the newline, so we will need to add that 
+        // when printing. 
         char* input_prompt = readline(">> ");
         // As I'm essentially following along here, I'm gonna comment out more than
         // I'd normally. 
